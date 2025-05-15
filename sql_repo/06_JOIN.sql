@@ -68,8 +68,6 @@ JOIN LOCATION L ON D.LOCATION_ID = L.LOCAL_CODE;-- LOCATION과 DEPARTMENT 조인
     3. 외부 조인 (OUTER JOIN)
        테이블 간의 JOIN 시 일치하지 않는 행도 포함시켜서 조회가 가능하다.
        단, 반드시 기준이되는 테이블(컬럼)을 지정해야 한다. (LEFT/RIGHT/(+))
-       -- 조인을 진행할 때 조인조건에 일치하는 요소가 없는 값은 안나옴
-       -- 일치하는 요소가 없어서 사라진 것.
 */
 -- 사원명, 부서코드, 부서명 조회
 SELECT E.EMP_NAME, E.DEPT_CODE, D.DEPT_TITLE
