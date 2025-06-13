@@ -38,6 +38,15 @@ SELECT
     ,DEL_YN
 FROM MEMBER WHERE USER_ID = 'USER01';
 
+-- 회원 정보 수정
+UPDATE MEMBER
+    SET
+        USER_PWD = ?
+        , USER_NICK = ?
+    WHERE NO = ?
+    AND DEL_YN = 'N'
+;
+
 -- 회원 탈퇴
 UPDATE MEMBER SET DEL_YN = 'Y' WHERE USER_ID = 'USER01' AND USER_PWD = '1234';
 
@@ -95,14 +104,3 @@ UPDATE BOARD SET
     
 -- 게시글 삭제
 UPDATE BOARD SET DEL_YN = 'Y' WHERE NO = 1;
-
-
-
-
-
-
-
-
-
-
-
